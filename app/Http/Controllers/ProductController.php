@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function showproduct()
     {
         //
-        return print "Hello word";
+        return  "Hello world";
     }
     public function index()
     {
