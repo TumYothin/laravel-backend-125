@@ -14,11 +14,6 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showproduct()
-    {
-        //
-        return Product::all();
-    }
 
     public function index()
     {
