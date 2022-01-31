@@ -20,14 +20,13 @@ use App\Http\Controllers\AuthController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-// Public route
-
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-// Protected route
 
-Route::group(['middleware' => 'auth:sanctum'], function(){
-    Route::resource('product' , ProductController::class);
+// Protected route
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::post('logout', [AuthController::class, 'logout']);
+    Route::resource('products', ProductController::class);
 });
 
 // Route::post('product',[ProductController::class,'store']);
