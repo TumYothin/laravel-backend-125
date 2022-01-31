@@ -14,7 +14,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+    public function showproduct()
+    {
+        //
+        return print "Hello word";
+    }
     public function index()
     {
         //
